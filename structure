@@ -1,0 +1,60 @@
+/app
+  /admin
+    /dashboard
+      page.js            // Admin Dashboard (overview of metrics)
+    /products
+      page.js            // Admin Product Management
+      /[id]
+        page.js          // Admin Edit Product
+    /orders
+      page.js            // Admin Order Management
+    /users
+      page.js            // Admin User Management
+    /analytics
+      page.js            // Admin Analytics
+    /settings
+      page.js            // Admin Settings
+    /login
+      page.js            // Admin login page
+  /customer
+    /home
+      page.js            // Customer Homepage
+    /shop
+      page.js            // Shop page for customers
+    /product
+      /[id]
+        page.js          // Product Details page for customers
+    /cart
+      page.js            // Customer Cart page
+    /checkout
+      page.js            // Customer Checkout page
+  /context
+    AdminContext.js      // Admin global state
+    CustomerContext.js   // Customer global state
+  /utils
+    api.js               // API utility for making requests
+    auth.js              // Authentication utilities
+    data.js              // Static data for testing
+  /public
+    /images              // Images for the app (icons, logos)
+  /styles
+    /admin.css           // Admin-specific styles
+    /customer.css        // Customer-specific styles
+    /global.css          // Global styles
+  /admin-layout.js       // Admin layout with sidebar and navbar
+  /customer-layout.js    // Customer layout with navbar and footer
+  /layout.js             // Global layout handler
+/components              // Shared components directory
+  /Admin
+    Sidebar.js           // Sidebar for Admin panel
+    Navbar.js            // Navbar for Admin panel
+    ProductCard.js       // Product card for Admin panel
+    UserCard.js          // User card for Admin panel
+    OrderCard.js         // Order card for Admin panel
+    Chart.js             // Analytics chart for Admin panel
+    Modal.js             // Modal for Admin panel
+  /Customer
+    Navbar.js            // Navbar for Customer site
+    Footer.js            // Footer for Customer site
+    ProductCard.js       // Product card for Customer site
+    CartItem.js          // Cart item for Customer site
