@@ -1,0 +1,219 @@
+:root{
+    --bg_color : #242529;
+    --text_color : #9B9B9B;
+    --card_bg_color : #A6ABFF;
+    --graph_bg_color : #37373F;
+  }
+  .products{
+    height: calc(100vh - 6.5em);
+    width: 100%;
+    background-color: var(--bg_color);
+    display: grid;
+    grid-template-rows: 5em 1fr;
+    overflow: auto;
+  }
+  .productsHead{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 1em 0 1em;
+    margin: 0 0 1em 0;
+  }
+  .productsSearchContainer{
+    height: 2.7em;
+    width: 25em;
+    border: solid 1px white;
+    border-radius: 2em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5em;
+    box-sizing: border-box;
+    padding: 0 0 0 1em;
+  }
+  .productsSearch{
+    width: 85%;
+    color: white;
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }
+  .addProduct{
+    color: white;
+    background-color: var(--card_bg_color);
+    border-radius: 3em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.6em 1em 0.6em 1em;
+    cursor: pointer;
+  }
+  .addProduct1{
+    color: black;
+    background-color: var(--card_bg_color);
+    border-radius: 3em;
+    display: none;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.6em 1em 0.6em 1em;
+    cursor: pointer;
+  }
+  .addProductIcon{
+    height: 2em;
+    width: 2em;
+  }
+  .productsContainer{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    box-sizing: border-box;
+    padding-left: 1em;
+    overflow: auto;
+  }
+.productsDetailsOverlay{
+  display: none;
+  height: calc(100% + 6.5em);
+  width: calc(100% + 13em);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(9.6px);
+  position: absolute;
+  top: -6.5em;
+  left: -13em;
+  z-index: 10;
+}
+.productsDetailsOverlay1{
+  display: block;
+  height: calc(100% + 6.5em);
+  width: calc(100% + 13em);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(9.6px);
+  position: absolute;
+  top: -6.5em;
+  left: -13em;
+  z-index: 10;
+}
+.productsDetails{
+  height: 80%;
+  width: 30em;
+  background-color: var(--bg_color);
+  border-radius: 1em;
+  position: relative;
+  left: calc(50% + 13em);
+  top: calc(50% + 6.5em);
+  transform: translate(calc(-50% - 6.5em),calc(-50% - 3em));
+  box-sizing: border-box;
+  padding: 1em;
+  overflow: auto;
+}
+.productsDetailsHead{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+.productsDetailsHead h2{
+  color: white;
+}
+.productOverAllBalance{
+  height: 4em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5em;
+  gap: 0.5em;
+  box-sizing: border-box;
+  padding-left: 1em;
+}
+.productOverAllBalance:hover{
+  background-color: #37373F;
+  cursor: pointer;
+}
+.productOverAllBalance h4{
+  color: white;
+  transform: translateY(0.2em);
+}
+.productOverAllBalance p{
+  color: var(--text_color);
+}
+.productOverAllBalanceColor{
+  height: 1em;
+  width: 1em;
+  background-color: lightgreen;
+  border-radius: 50%;
+  margin-right: 0.2em;
+  margin-left: auto;
+}
+.uploadImageContainer{
+  height: 10em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  border: 2px dotted var(--text_color);
+  border-radius: 1em;
+  cursor: pointer;
+}
+.uploadImageContainer label{
+  width: 15em;
+  color: white;
+  }
+.uploadImageContainer span{
+  color: var(--text_color);
+  font-size: 0.9em
+}
+.uploadImageContainer input{
+display: none;
+}
+@media only screen and (max-width: 600px) {
+  .productsContainer{
+    grid-template-columns: 1fr 1fr;
+  }
+  .productsSearchContainer{
+    height: 2.5em;
+    width: 13em;
+  }
+  .addProduct{
+  display: none;
+  }
+  .addProduct1{
+    display: flex;
+    padding: 0.6em 1em 0.6em 1em;
+  }
+  .productsDetailsOverlay{
+    display: none;
+    height: calc(100%);
+    width: calc(100%);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(9.6px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  .productsDetailsOverlay1{
+    display: block;
+    height: calc(100%);
+    width: calc(100%);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(9.6px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  .productsDetails{
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg_color);
+    border-radius: 0;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: translate(0,0);
+    box-sizing: border-box;
+    padding: 1em;
+  }
+}

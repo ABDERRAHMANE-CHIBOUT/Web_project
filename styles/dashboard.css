@@ -1,0 +1,137 @@
+:root{
+    --bg_color : #242529;
+    --text_color : #9B9B9B;
+    --card_bg_color : #A6ABFF;
+    --graph_bg_color : #37373F;
+  }
+.dashboard{
+    height: calc(100vh - 6.5em);
+    width: 100%;
+    background-color: var(--bg_color);
+    box-sizing: border-box;
+    padding: 1em;
+    overflow: auto;
+}
+.dashboardCardsContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2em;
+    overflow: auto;
+}
+.dashboardCardsContainer > div{
+    height: 22em;
+    border-radius: 1em;
+    background-color: var(--graph_bg_color);
+    cursor: pointer;
+}
+.dashboardSales{
+    background-color: var(--card_bg_color);
+    background-image: url('/money1.jpg');
+    background-size: cover;
+    background-position-x: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 1em 2em 1em 2em;
+}
+.dashboardOrders{
+    grid-column: 1/3;
+}
+.dashboardCardHead{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.dashboardCardTitle{
+    color: white;
+}
+.dashboardCardduration{
+    color: white;
+}
+.dashboardSalesStats{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.dashboardSalesStats span{
+    font-weight: bold;
+}
+.dashboardSalesStats h1{
+    font-size: 2.2em;
+}
+.chartsContainer{
+    height: 270px;
+}
+.dashboardProfit{
+    box-sizing: border-box;
+    padding: 1em 2em 1em 2em;
+}
+.dashboardTrafic{
+    box-sizing: border-box;
+    padding: 1em 2em 1em 2em;
+}
+.dashboardStockValue{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1em 2em 1em 2em;
+}
+.dashboardStockValueStats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-130px);
+}
+.dashboardStockValueStats h1{
+    color: white;
+    font-size: 2.2em;
+}
+.dashboardStockValueStats p{
+    color: var(--text_color);
+}
+.dashboardOrders{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1em 2em 1em 2em;
+}
+.dashboardOrdersTable{
+    height: 15em;
+    width: 100%;
+    overflow: auto;
+}
+.dashboardOrdersTableHead{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 7em 6em 4em 4em;
+    margin-bottom: 1em;
+}
+.dashboardOrdersTableHeadTitles{
+    color: var(--text_color);
+}
+@media only screen and (max-width: 600px) {
+    .dashboardCardsContainer{
+        height: 100vh;
+        display: block;
+    }
+    .dashboardCardsContainer > div{
+        height: 22em;
+        border-radius: 1em;
+        background-color: var(--graph_bg_color);
+        cursor: pointer;
+    }
+    .dashboardOrders{
+        grid-column: 1/2;
+    }
+    .chartsContainer{
+        height: 270px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,53 @@
+:root{
+    --bg_color : #242529;
+    --text_color : #9B9B9B;
+    --card_bg_color : #A6ABFF;
+    --graph_bg_color : #37373F;
+  }
+.order{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 7em 6em 4em 4em;
+    margin: 0 0 2em 0;
+}
+.orderName{
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+.orderNameAvatar{
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    background-size: cover;
+    background-position-x: center;
+}
+.orderNumber{
+    color: white;
+    padding-top:0.4em ;
+}
+.orderProducts{
+    color: white;
+    padding-top:0.2em ;
+}
+.orderProducts svg{
+    transform: translateY(0.3em);
+}
+.orderAmount{
+    color: white;
+    padding-top:0.4em ;
+}
+.orderDate{
+    color: white;
+    padding-top:0.4em ;
+}
+.orderStatus{
+    color: var(--card_bg_color);
+    background-color: #2F2F36;
+    padding:0.4em 0 0 0.9em ;
+    border-radius: 1em;
+}
+@media only screen and (max-width: 600px) {
+    
+}

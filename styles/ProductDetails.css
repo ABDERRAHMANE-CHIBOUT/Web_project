@@ -1,0 +1,33 @@
+:root{
+    --bg_color : #242529;
+    --text_color : #9B9B9B;
+    --card_bg_color : #A6ABFF;
+    --graph_bg_color : #37373F;
+  }
+.productDetails{
+    height: 4em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5em;
+    gap: 0.5em;
+    box-sizing: border-box;
+    padding-left: 1em;
+
+}
+.productDetails:hover{
+    background-color: #37373F;
+    cursor: pointer;
+}
+.productDetails input{
+    color: white;
+    font-size: 1em;
+    font-weight: bold;    
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transform: translateY(0.2em);
+}
+.productDetails p{
+    color: var(--text_color);
+}

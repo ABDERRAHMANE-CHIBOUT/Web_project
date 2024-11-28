@@ -1,0 +1,41 @@
+:root{
+    --bg_color : #242529;
+    --text_color : #9B9B9B;
+    --card_bg_color : #A6ABFF;
+    --graph_bg_color : #37373F;
+  }
+.productCard{
+    height: 15.4em;
+    width: 16em;
+    cursor: pointer;
+    border: 1px solid var(--text_color) ;
+    border-radius: 1em;
+    box-sizing: border-box;
+    margin-bottom: 2em;
+    padding: 1em;
+}
+.productCard img{
+    height: 10em;
+    width: 14em;
+    border-radius: 1em;
+}
+.productCard p{
+    color: var(--text_color);
+}
+.productCard h2{
+    color: white;
+    transform: translateY(-0.2em);
+    margin-bottom: 1em;
+}
+@media only screen and (max-width: 600px) {
+    .productCard{
+        width: 10em;
+        padding: 0;
+        margin-bottom: 0;
+        border: 0;
+    }
+    .productCard img{
+        height: 10em;
+        width: 10em;
+    }
+  }
