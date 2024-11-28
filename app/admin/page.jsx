@@ -11,7 +11,6 @@ import ordersData from '@/utils/ordersData';
 const page = () => {
   return (
     <section className='dashboard'>
-      <div className="dashboardCardsContainer">
         <div className="dashboardSales">
           <div className="dashboardCardHead">
             <h2 className='dashboardCardTitle'>sales</h2>
@@ -46,12 +45,12 @@ const page = () => {
             <p className='dashboardCardduration'>week</p>
           </div>
           <div className="dashboardOrdersTableHead">
-              <p className="dashboardOrdersTableHeadTitles">client full Name</p>
-              <p className="dashboardOrdersTableHeadTitles">client Number</p>
-              <p className="dashboardOrdersTableHeadTitles">products</p>
-              <p className="dashboardOrdersTableHeadTitles">amount</p>
-              <p className="dashboardOrdersTableHeadTitles">since</p>
-              <p className="dashboardOrdersTableHeadTitles"
+              <p className="dashboardOrdersname">client full Name</p>
+              <p className="dashboardOrdersnumber">client Number</p>
+              <p className="dashboardOrdersproducts">products</p>
+              <p className="dashboardOrdersamount">amount</p>
+              <p className="dashboardOrderssince">since</p>
+              <p className="dashboardOrdersstatus"
               style={{paddingLeft : '0.2em'}}>status</p>
             </div>
           <div className="dashboardOrdersTable">
@@ -70,7 +69,7 @@ const page = () => {
             <h2 className='dashboardCardTitle'>Stock</h2>
             <p className='dashboardCardduration'>week</p>
           </div>
-          <div style={{ width: '220px', height: '220px', zIndex: 5 }}>
+          <div style={{ width: '220px', height: '220px', zIndex: 1 }}>
             <Circle data={CrData.data} options={CrData.options}/>
           </div>
           <div className="dashboardStockValueStats">
@@ -78,8 +77,6 @@ const page = () => {
             <p>since last week</p>
           </div>
         </div>
-      </div>
-
     </section>
   )
 }

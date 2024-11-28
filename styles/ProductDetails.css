@@ -20,6 +20,7 @@
     cursor: pointer;
 }
 .productDetails input{
+    width: 8em;
     color: white;
     font-size: 1em;
     font-weight: bold;    
@@ -30,4 +31,7 @@
 }
 .productDetails p{
     color: var(--text_color);
+}
+.productDetailsIcon{
+    margin-left: auto;
 }

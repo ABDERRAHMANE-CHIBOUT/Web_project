@@ -10,6 +10,7 @@ const Page = () => {
   const [productDis1,setProductDis1] = useState(false);
   const [productDis2,setProductDis2] = useState(false);
   const [productInx,setProductInx] = useState(0);
+  const [pEdit,setPEdit] = useState(false);
   return (
     <section className="products">
       <div className="productsHead">
@@ -30,24 +31,25 @@ const Page = () => {
         <div className="productsDetails">
           <div className="productsDetailsHead">
             <h2>{productsData[productInx].name}</h2>
-            <Image src='/close.svg' alt='close' height={24} width={24}
-            onClick={()=>setProductDis1(!productDis1)}/>
-          </div>
-          <ProductDetails src='/product1.svg' name='Tshirt' des='product name' />
-          <ProductDetails src='/info.svg' name='loading tshirt' des='description' />
-          <ProductDetails src='/category.svg' name='shirts' des='category' />
-          <ProductDetails src='/quantity.svg' name='15' des='quantity' />
-          <ProductDetails src='/stock.svg' name='30 000' des='stock value' />
-          <ProductDetails src='/money.svg' name='1 000' des='buying price' />
-          <ProductDetails src='/money1.svg' name='2 000' des='selling price' />
-          <ProductDetails src='/profit.svg' name='22 000' des='profit' />
-          <div className='productOverAllBalance'>
-            <Image src='/scale.svg' alt='icon' height={32} width={32}/>
             <div>
-              <h4>58 000</h4>
-              <p>money generated</p>
+              <Image src='/edit.svg' alt='close' height={24} width={24}
+              onClick={()=>setProductDis1(!productDis1)}/>
+              <Image src='/close.svg' alt='close' height={24} width={24}
+              onClick={()=>setProductDis1(!productDis1)}/>
             </div>
-            <div className="productOverAllBalanceColor"></div>
+          </div>
+          <ProductDetails src='/product1.svg' name='Tshirt' des='product name' icon='/edit.svg'/>
+          <ProductDetails src='/info.svg' name='loading tshirt' des='description' icon='/edit.svg'/>
+          <ProductDetails src='/category.svg' name='shirts' des='category' icon='/edit.svg'/>
+          <ProductDetails src='/quantity.svg' name='15' des='quantity' icon='/edit.svg'/>
+          <ProductDetails src='/money.svg' name='1 000' des='buying price' icon='/edit.svg'/>
+          <ProductDetails src='/money1.svg' name='2 000' des='selling price' icon='/edit.svg'/>
+          <ProductDetails src='/profit.svg' name='22 000' des='profit' icon='/void.svg'/>
+          <ProductDetails src='/stock.svg' name='30 000' des='stock value' icon='/void.svg'/>
+          <ProductDetails src='/scale.svg' name='58 000' des='money generated' icon='/overall.svg'/>
+          <div className="productsDetailsConfirm">
+            <button>cancel</button>
+            <button>add product</button>
           </div>
         </div>
       </div>

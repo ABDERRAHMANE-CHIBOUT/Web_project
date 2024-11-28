@@ -9,6 +9,7 @@
     display: grid;
     grid-template-columns: 1fr 0.8fr 7em 6em 4em 4em;
     margin: 0 0 2em 0;
+    overflow: auto;
 }
 .orderName{
     color: white;
@@ -49,5 +50,10 @@
     border-radius: 1em;
 }
 @media only screen and (max-width: 600px) {
-    
+    .order{
+        grid-template-columns: 1fr 5em 4em;
+    }
+    .orderDate,.orderProducts,.orderNumber{
+        display: none;
+    }
 }
